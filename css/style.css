@@ -84,6 +84,10 @@ header{
     }
 }
 @media (max-width : 480px) {
+    body{
+        padding: 0px 10px;
+        font-size: 28px;
+    }
     .container{
         justify-content: center;
     }
