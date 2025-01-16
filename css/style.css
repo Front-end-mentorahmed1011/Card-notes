@@ -105,7 +105,9 @@ header{
         flex-direction: column;
         gap: 10px;
         word-wrap: break-word;
-
+    }
+    .flash-card-modal{
+        width: 90%;
     }
 }
 
