@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #04837d1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-card{
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #04837dbe;
+    color: #fefefe;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+.add-card:hover{
+    background-color: #04837d;
+}
+.sectionStyle{
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 80%;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+    align-items: stretch;
+}
+.organized{
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    word-wrap: break-word;
+}
+.random{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    flex-grow: 1;
+
+}
+@media (max-width : 900px) {
+    .container{
+        justify-content: center;
+    }
+}
+@media (max-width : 480px) {
+    .container{
+        justify-content: center;
+    }
+    .sectionStyle{
+        display: none;
+    }
+    .random,
+    .organized{
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        word-wrap: break-word;
+
+    }
+}
+
+.card h3{
+    text-transform: capitalize;
+    color: #012927;
+    font-size: 22px;
+}
+.card span{
+    color: #333;
+}
+.card .mainBtn{
+    display: block;
+    padding: 7px 14px;
+    border: none;
+    background-color: #04837dbe;
+    color: #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.card .mainBtn:hover{
+    background-color: #04837d;
+}
+.card .edits{
+    text-align: end;
+}
+.card .edits button{
+    background-color: transparent;
+    border: 0;
+    margin-right: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.card .edits .edit{
+    color: rgba(20, 223, 20, 0.774);
+}
+.card .edits .edit:hover,
+.card .edits .edit:focus{
+    color: rgb(20, 223, 20);
+}
+.card .edits .remove{
+    color: rgba(223, 20, 20, 0.774);
+}
+.card .edits .remove:hover,
+.card .edits .remove:focus{
+    color: rgb(223, 20, 20);
+}
+.flash-card-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    background-color: #fefefe;
+    box-shadow: 0 30px 15px rgba(0,0,0,0.1);
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.flash-card-modal h1{
+    margin-bottom: 50px;
+    text-align: center;
+    color: #012927;
+}
+.flash-card-modal .handles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.flash-card-modal .handles button{
+    background-color: #04837dbe;
+    color: #fefefe;
+    padding: 10px 12px;
+    margin-right: 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+.flash-card-modal .handles button:hover,
+.flash-card-modal .handles button:focus{
+    background-color: #04837d;
+}
+.flash-card-modal .handles span{
+    font-size: 16px;
+    color: rgba(223, 20, 20, 0.808);
+    text-transform: capitalize;
+}
+.flash-card-modal form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+} 
+.flash-card-modal form .form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.flash-card-modal form .form-control label{
+    color: #213121;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.flash-card-modal form .form-control textarea{
+    padding: 5px;
+    border: 1px solid #dddddd93;
+    border-radius: 3px;
+    min-height: 90px;
+    outline: none;
+    font-size: 14px;
+}
+.flash-card-modal form .form-control textarea:focus,
+.flash-card-modal form .form-control textarea:hover{
+    border: 1px solid #dddddd;
+}
+.flash-card-modal .save{
+    display: block;
+    padding: 7px 14px;
+    border: none;
+    background-color: #04837dbe;
+    color: #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.none{
+    display: none;
+}
+.v-none{
+    visibility: hidden;
+}
+.sectionStyle button{
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #04837dbe;
+    color: #fefefe;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}

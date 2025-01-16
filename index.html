@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Note Cards Application</title>
+</head>
+<body>
+
+    <header>
+        <button class="add-card" id="addCard" onclick="showModal()">Add New Card</button>
+    </header>
+    
+    <br>
+    <div class="sectionStyle none">
+        <button id="designToggler"><i class="fa-solid fa-table-columns"></i></button>
+    </div>
+    
+<!-- <i class="fa-solid fa-shuffle"></i> -->
+    
+    <div class="container" id="container">
+        <!-- js code -->
+        
+    </div>
+
+    <div class="flash-card-modal none" id="modal">
+        <h1>Add Note Card</h1>
+        <div class="handles">
+            <span class="error-message v-none" id="errorMessage">inputs cannot be empty</span>
+            <button id="closeModal" onclick='closeModal()'><i class="fa-solid fa-x"></i></button>
+        </div>
+        <form id="mainForm" novalidate>
+            <div class="form-control">
+                <label for="title">Title:</label>
+                <textarea name="title" id="title" placeholder="Type the question here..."></textarea>
+            </div>
+            <div class="form-control">
+                <label for="answer">Answer:</label>
+                <textarea name="answer" id="answer" placeholder="Type the answer here..." ></textarea>
+            </div>
+        </form>
+        <button class="save" id="modalBtn" onclick="saveCard()">Save</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
